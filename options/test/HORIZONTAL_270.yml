@@ -1,4 +1,4 @@
-name: HAT_SRx4_ImageNet-LR
+name: HORIZONTAL_270
 model_type: HATModel
 scale: 4
 num_gpu: 1  # set num_gpu: 0 for cpu mode
@@ -8,7 +8,7 @@ datasets:
   test_1:  # the 1st test dataset
     name: custom
     type: SingleImageDataset
-    dataroot_lq: /home/dircon/hoeyeong/khuggle_data/khuggle_test
+    dataroot_lq: /content/TTA/HORIZONTAL/270
     io_backend:
       type: disk
 
@@ -34,7 +34,7 @@ network_g:
 
 # path
 path:
-  pretrain_network_g: /home/dircon/hoeyeong/HAT/experiments/FINAL/models/net_g_5000.pth
+  pretrain_network_g: /content/khuggle_HAT_/experiments/FINAL/models/net_g_5000.pth
   strict_load_g: true
   param_key_g: 'params_ema'
 
